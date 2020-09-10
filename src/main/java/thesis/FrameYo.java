@@ -42,7 +42,7 @@ public class FrameYo extends JFrame {
 	        JPanel panel = new JPanel(); // the panel is not visible in output
 	        JLabel enter = new JLabel("Enter Text");
 	        
-	        JTextField tf = new JTextField(10); // accepts upto 10 characters
+	        final JTextField tf = new JTextField(10); // accepts upto 10 characters
 	        tf.setName("entertext");
 
 	        
@@ -57,7 +57,7 @@ public class FrameYo extends JFrame {
 	        panel.add(reset);
 
 	        // Text Area at the Center
-	        JTextArea ta = new JTextArea();
+	        final JTextArea ta = new JTextArea();
 	        ta.setName("textarea");
 	        send.addActionListener(new ActionListener() { 
 	        	  public void actionPerformed(ActionEvent e) { 
