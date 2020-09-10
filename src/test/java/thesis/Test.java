@@ -25,6 +25,13 @@ public class Test extends AssertJSwingJUnitTestCase {
 	@org.junit.Test
 	public void testMethod() {
 
+
+		try {
+			Thread.sleep(60000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		window.textBox("entertext").requireEmpty();
 		window.textBox("textarea").requireEmpty();
 
@@ -35,7 +42,7 @@ public class Test extends AssertJSwingJUnitTestCase {
 //		robot().click(new Point(50, 50), MouseButton.LEFT_BUTTON, 1);
 
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(60000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
