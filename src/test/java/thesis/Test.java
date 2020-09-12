@@ -3,6 +3,8 @@ package thesis;
 import static org.junit.Assert.assertNull;
 
 import java.awt.Point;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.assertj.swing.core.MouseButton;
 import org.assertj.swing.edt.GuiActionRunner;
@@ -35,7 +37,10 @@ public class Test extends AssertJSwingJUnitTestCase {
 //		}
 		
 		ScreenshotTaker t = new ScreenshotTaker();
-		t.saveDesktopAsPng("testt4.png");
+		Date d = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat();
+		
+		t.saveDesktopAsPng(sdf.format(d)+"--1.png");
 		
 		window.textBox("entertext").requireEmpty();
 		window.textBox("textarea").requireEmpty();
@@ -43,6 +48,7 @@ public class Test extends AssertJSwingJUnitTestCase {
 		window.textBox("entertext").enterText("testtext");
 		window.button("sendbutton").click();
 		window.textBox("textarea").requireText("testtext");
+		t.saveDesktopAsPng(sdf.format(d)+"--2.png");
 
 //		robot().click(new Point(50, 50), MouseButton.LEFT_BUTTON, 1);
 
