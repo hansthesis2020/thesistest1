@@ -38,7 +38,7 @@ public class Test extends AssertJSwingJUnitTestCase {
 		
 		ScreenshotTaker t = new ScreenshotTaker();
 		Date d = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		t.saveDesktopAsPng(sdf.format(d)+"--1.png");
 		
