@@ -7,6 +7,7 @@ import java.awt.Point;
 import org.assertj.swing.core.MouseButton;
 import org.assertj.swing.edt.GuiActionRunner;
 import org.assertj.swing.fixture.FrameFixture;
+import org.assertj.swing.image.ScreenshotTaker;
 import org.assertj.swing.junit.testcase.AssertJSwingJUnitTestCase;
 
 public class Test extends AssertJSwingJUnitTestCase {
@@ -26,12 +27,16 @@ public class Test extends AssertJSwingJUnitTestCase {
 	public void testMethod() {
 
 
-		try {
-			Thread.sleep(60000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(60000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		ScreenshotTaker t = new ScreenshotTaker();
+		t.saveDesktopAsPng("testt4.png");
+		
 		window.textBox("entertext").requireEmpty();
 		window.textBox("textarea").requireEmpty();
 
@@ -41,12 +46,12 @@ public class Test extends AssertJSwingJUnitTestCase {
 
 //		robot().click(new Point(50, 50), MouseButton.LEFT_BUTTON, 1);
 
-		try {
-			Thread.sleep(60000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(60000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 	}
 
